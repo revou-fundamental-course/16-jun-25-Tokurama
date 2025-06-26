@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Matematik Segitiga</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kalkulator Matematik Segitiga</h1>
+            <p>Hitung Luas dan Keliling Segitiga dengan Mudah</p>
+        </header>
+
+        <main>
+            <!-- Area Calculator Section -->
+            <div class="calculator-section">
+                <div class="section-header">
+                    <h2>Hitung Luas Segitiga</h2>
+                    <p>Masukkan alas dan tinggi segitiga</p>
+                </div>
+                
+                <div class="calculator-card">
+                    <form id="areaForm">
+                        <div class="input-group">
+                            <label for="areaBase">Alas (cm):</label>
+                            <input type="number" id="areaBase" name="areaBase" step="0.01" min="0" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="areaHeight">Tinggi (cm):</label>
+                            <input type="number" id="areaHeight" name="areaHeight" step="0.01" min="0" required>
+                        </div>
+
+                        <button type="submit" class="calculate-btn area-btn">Hitung Luas</button>
+                    </form>
+
+                    <div id="areaResults" class="results-section" style="display: none;">
+                        <h3>Hasil Luas Segitiga</h3>
+                        <div class="result-item">
+                            <span class="result-label">Luas Segitiga:</span>
+                            <span id="areaValue" class="result-value">-</span>
+                        </div>
+                        <div class="formula-info">
+                            <small>Formula: Luas = ½ × alas × tinggi</small>
+                        </div>
+                    </div>
+
+                    <div id="areaError" class="error-message" style="display: none;">
+                        <p>Mohon masukkan nilai yang valid untuk alas dan tinggi!</p>
+                        <small>Pastikan semua nilai lebih besar dari 0.</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Perimeter Calculator Section -->
+            <div class="calculator-section">
+                <div class="section-header">
+                    <h2>Hitung Keliling Segitiga</h2>
+                    <p>Masukkan ketiga sisi segitiga</p>
+                </div>
+                
+                <div class="calculator-card">
+                    <form id="perimeterForm">
+                        <div class="input-group">
+                            <label for="sideA">Sisi A (cm):</label>
+                            <input type="number" id="sideA" name="sideA" step="0.01" min="0" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="sideB">Sisi B (cm):</label>
+                            <input type="number" id="sideB" name="sideB" step="0.01" min="0" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="sideC">Sisi C (cm):</label>
+                            <input type="number" id="sideC" name="sideC" step="0.01" min="0" required>
+                        </div>
+
+                        <button type="submit" class="calculate-btn perimeter-btn">Hitung Keliling</button>
+                    </form>
+
+                    <div id="perimeterResults" class="results-section" style="display: none;">
+                        <h3>Hasil Keliling Segitiga</h3>
+                        <div class="result-item">
+                            <span class="result-label">Keliling Segitiga:</span>
+                            <span id="perimeterValue" class="result-value">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Jenis Segitiga:</span>
+                            <span id="triangleType" class="result-value">-</span>
+                        </div>
+                        <div class="formula-info">
+                            <small>Formula: Keliling = sisi A + sisi B + sisi C</small>
+                        </div>
+                    </div>
+
+                    <div id="perimeterError" class="error-message" style="display: none;">
+                        <p>Sisi-sisi yang dimasukkan tidak dapat membentuk segitiga yang valid!</p>
+                        <small>Pastikan jumlah dua sisi terpendek lebih besar dari sisi terpanjang.</small>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Kalkulator Matematik Segitiga. Dibuat dengan ❤️</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
